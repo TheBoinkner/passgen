@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+len=20
+echo "Set password length default = 20"
+read input_len
+if [ -n "$input_len" ]; then
+	len=$input_len
+fi
+pass=$(tr -dc 'A-Za-z0-9!@#$%^&*()_+-=[]{}|;:,.<>/?' < /dev/urandom | head -c $len)
+echo $pass
