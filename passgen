@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 len=20
-echo "Set password length default = 20"
+echo "Set password length: (default = 20)"
 read input_len
 if [ -n "$input_len" ]; then
 	len=$input_len
